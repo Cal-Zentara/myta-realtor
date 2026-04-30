@@ -676,21 +676,40 @@
     }
 
     /* ─── FOOTER ─────────────────────────────────────────── */
-    .footer { border-top: 1px solid var(--border); padding: 36px 0; }
+    .footer { border-top: 1px solid var(--border); padding: 56px 0 40px; }
     .footer-inner {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      gap: 24px;
+      gap: 16px;
+    }
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
     }
     .footer-logo {
       display: flex;
       align-items: center;
     }
     .footer-logo img {
-      height: 72px;
+      height: 216px;
       width: auto;
       display: block;
+    }
+    .footer-phone {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .footer-phone:hover { color: var(--gold); }
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      gap: 24px;
     }
     .footer-meta {
       font-size: 0.8125rem;
@@ -920,7 +939,8 @@
 
       .contact-grid { grid-template-columns: 1fr; gap: 52px; }
 
-      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-inner { text-align: center; }
+      .footer-bottom { flex-direction: column; gap: 8px; }
 
       .gallery-strip { padding: 0 0 80px; }
       .strip-scroll { padding: 0 24px; }
@@ -1265,9 +1285,14 @@
   <footer class="footer">
     <div class="wrap">
       <div class="footer-inner">
-        <span class="footer-logo"><img src="images/logo.png" alt="My Ta REALTOR" /></span>
-        <span class="footer-meta" data-key="footer_meta">REALTOR® · @Socalrealtor · © 2026</span>
-        <a href="https://instagram.com/mytarealtor" target="_blank" rel="noopener" class="footer-ig">@mytarealtor</a>
+        <div class="footer-brand">
+          <span class="footer-logo"><img src="images/logo.png" alt="My Ta REALTOR" /></span>
+          <a href="tel:6267825531" class="footer-phone">(626) 782-5531</a>
+        </div>
+        <div class="footer-bottom">
+          <span class="footer-meta" data-key="footer_meta">REALTOR® · @Socalrealtor · © 2026</span>
+          <a href="https://instagram.com/mytarealtor" target="_blank" rel="noopener" class="footer-ig">@mytarealtor</a>
+        </div>
       </div>
     </div>
   </footer>
