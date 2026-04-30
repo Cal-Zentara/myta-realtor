@@ -210,6 +210,14 @@
     }
     .nav-links a:hover { color: var(--text); }
     .nav-right { display: flex; align-items: center; gap: 12px; }
+    .nav-phone {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .nav-phone:hover { color: var(--gold); }
     .lang-btn {
       background: transparent;
       border: 1px solid var(--border);
@@ -963,6 +971,7 @@
         <a href="#contact"      data-key="nav_contact">Contact</a>
       </div>
       <div class="nav-right">
+        <a href="tel:6267825531" class="nav-phone">(626) 782-5531</a>
         <button class="lang-btn" id="langToggle" aria-label="Switch language">
           <span id="langLabel">VI</span>
         </button>
